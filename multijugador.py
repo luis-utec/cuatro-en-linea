@@ -30,25 +30,23 @@ def verificar_ganador(tablero, ficha):
 
     return False
 
-
 def menu():
     juego = "Cuatro en linea"
     print(f"{juego: ^35}\n")
 
-    print("1) Comenzar juego\n")
-    print("2) Juegos realizados\n")
-    print("3) Salir del juego\n")
+    print("1) Un jugador\n")
+    print("2) Multijugador\n")
+    print("3) Juegos realizados\n")
+    print("4) Salir del juego\n")
 
     opcion = input("Opcion: ")
     while True:
-        if opcion == "1" or opcion == "2" or opcion == "3":
+        if opcion == "1" or opcion == "2" or opcion == "3" or opcion == "4":
             break
         else:
             print("Opcion invalida")
             opcion = input("Opcion: ")
     return opcion
-
-
 def validar_movimiento(movimiento):
     try:
         movimiento = int(movimiento)
